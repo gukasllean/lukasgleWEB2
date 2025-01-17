@@ -27,7 +27,16 @@ function printPersonalData(data: personalData) {
     console.log("Hobbies: ");
     data.hobbies.forEach((hobby) => {
         console.log(`-  ${hobby}`);
-    })
-}
+    });
 
-printPersonalData(personalData)
+
+    console.log("Age in details :")
+    ageConversion(data.age);
+}
+printPersonalData(personalData);
+function ageConversion(age: number) {
+    console.log(`age in days: ${age * 365}`);
+    console.log(`age in hours: ${age * 8760}`);
+    console.log(`age in minutes: ${age * 525600}`);
+    console.log(`age in seconds: ${age * 31536000}`);
+}
